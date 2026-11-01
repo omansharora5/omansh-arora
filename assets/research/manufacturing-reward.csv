@@ -1,0 +1,5 @@
+component,weight
+Yield,0.4
+Causal match,0.2
+Reasoning proxy,0.2
+Financial signal,0.2

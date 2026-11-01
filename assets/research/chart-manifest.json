@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "memory-recall",
+    "title": "Graph methods tied on recall",
+    "kind": "Historical measured result, 18 October 2026",
+    "sources": [
+      "https://github.com/omansharora5/Q-MDM-Quantum-Inspired-Multidimensional-Dynamic-Memory-/blob/main/artifacts/benchmarks/results.json"
+    ],
+    "generator": "Matplotlib"
+  },
+  {
+    "slug": "memory-latency",
+    "title": "Historical retrieval latency",
+    "kind": "Historical measured result, 18 October 2026",
+    "sources": [
+      "https://github.com/omansharora5/Q-MDM-Quantum-Inspired-Multidimensional-Dynamic-Memory-/blob/main/artifacts/benchmarks/results.json"
+    ],
+    "generator": "Matplotlib"
+  },
+  {
+    "slug": "esp32-storage",
+    "title": "Whistle model sizes against an S3 model partition",
+    "kind": "External reported model sizes and computed flash capacities",
+    "sources": [
+      "https://huggingface.co/Cactus-Compute/whistle",
+      "https://github.com/andrisgauracs/whistle-esp32"
+    ],
+    "generator": "Matplotlib"
+  },
+  {
+    "slug": "esp32-timing",
+    "title": "Community S3 timing for one English command",
+    "kind": "External reported result, S3 at 240 MHz, depth 4, one 2-second command; not my benchmark",
+    "sources": [
+      "https://github.com/andrisgauracs/whistle-esp32"
+    ],
+    "generator": "Matplotlib"
+  },
+  {
+    "slug": "hallucinative-search",
+    "title": "Independent-candidate probability illustration",
+    "kind": "Analytical illustration only: 1-(1-p)^n; p is assumed and candidates are independent; not measured creativity",
+    "sources": [],
+    "generator": "Matplotlib"
+  },
+  {
+    "slug": "manufacturing-reward",
+    "title": "Fab Yield Agent implemented reward coefficients",
+    "kind": "Code-derived coefficients, not measured learning performance",
+    "sources": [
+      "https://github.com/omansharora5/fab-yield-agent/blob/0732e65711cdb6000db1b82c0cc95138861b1315/environment/env.py"
+    ],
+    "generator": "Matplotlib"
+  },
+  {
+    "slug": "semiconductor-budget",
+    "title": "Fab Yield Agent episode budget",
+    "kind": "Environment rule illustration, not a yield or training result",
+    "sources": [
+      "https://github.com/omansharora5/fab-yield-agent/blob/0732e65711cdb6000db1b82c0cc95138861b1315/environment/env.py"
+    ],
+    "generator": "Matplotlib"
+  }
+]

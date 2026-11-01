@@ -1,0 +1,127 @@
+{
+  "run_at": "2026-10-18T22:13:10.076257+00:00",
+  "dataset_hash": "bd4ca310826eb23d7ffd9e25bea5080d2f20e11442061f9075d7b12091904cfa",
+  "config": {
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "distractor_scales": [
+      24,
+      96,
+      240
+    ],
+    "repeats": 2,
+    "k": 3,
+    "budget_chars": 3200,
+    "max_hops": 2,
+    "warmup": "One untimed call per method"
+  },
+  "runtime": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "matplotlib": "3.11.2",
+      "pydantic": "2.13.4"
+    },
+    "retrieval_sha256": "1bde30ffa760792e67f61df4e73c4b09e638d0e98d860f41a82bbb8bbaf1e465",
+    "fixtures_sha256": "65a8adcc0520ef77b78a64351ece03ef2bb95ea1392fbac598ef896ec3db8e36"
+  },
+  "aggregate": [
+    {
+      "method": "bm25",
+      "samples": 432,
+      "errors": 0,
+      "recall_at_k": 0.8333333333333334,
+      "evidence_precision": 0.4444444444444444,
+      "coverage": 0.6666666666666666,
+      "context_chars": 1715.2407407407406,
+      "abstention_success": 0.5,
+      "p50_ms": 8.1775,
+      "p95_ms": 20.652579999999997,
+      "stale_version_errors": 0
+    },
+    {
+      "method": "vector",
+      "samples": 432,
+      "errors": 0,
+      "recall_at_k": 0.8333333333333334,
+      "evidence_precision": 0.4444444444444444,
+      "coverage": 0.6666666666666666,
+      "context_chars": 1717.5185185185185,
+      "abstention_success": 0.5,
+      "p50_ms": 8.0642,
+      "p95_ms": 20.26749,
+      "stale_version_errors": 0
+    },
+    {
+      "method": "beam",
+      "samples": 432,
+      "errors": 0,
+      "recall_at_k": 1.0,
+      "evidence_precision": 0.5,
+      "coverage": 1.0,
+      "context_chars": 1924.0787037037037,
+      "abstention_success": 0.5,
+      "p50_ms": 8.82695,
+      "p95_ms": 22.18009,
+      "stale_version_errors": 0
+    },
+    {
+      "method": "ppr",
+      "samples": 432,
+      "errors": 0,
+      "recall_at_k": 1.0,
+      "evidence_precision": 0.5,
+      "coverage": 1.0,
+      "context_chars": 1930.912037037037,
+      "abstention_success": 0.5,
+      "p50_ms": 9.727450000000001,
+      "p95_ms": 22.369165,
+      "stale_version_errors": 0
+    },
+    {
+      "method": "pace",
+      "samples": 432,
+      "errors": 0,
+      "recall_at_k": 1.0,
+      "evidence_precision": 0.5,
+      "coverage": 1.0,
+      "context_chars": 1933.3240740740741,
+      "abstention_success": 0.5,
+      "p50_ms": 9.608149999999998,
+      "p95_ms": 22.96643,
+      "stale_version_errors": 0
+    },
+    {
+      "method": "qwam",
+      "samples": 432,
+      "errors": 0,
+      "recall_at_k": 1.0,
+      "evidence_precision": 0.5,
+      "coverage": 1.0,
+      "context_chars": 1925.773148148148,
+      "abstention_success": 0.5,
+      "p50_ms": 9.4749,
+      "p95_ms": 22.984984999999998,
+      "stale_version_errors": 0
+    }
+  ],
+  "limitations": [
+    "Synthetic fixed templates with seeded distractors; small regression study, not a public benchmark or vendor comparison.",
+    "Queries and relevance labels were fixed before the final measured run; no weights were tuned from these outputs.",
+    "Pure in-process retrieval including per-call lexical indexing. Excludes DB/network, ingestion, LLM generation and answer accuracy.",
+    "Vector means TF-IDF cosine over lexical tokens. No neural semantic embeddings or external memory products ran.",
+    "Recall/precision use the first k returned handles under one shared serialized character budget. Source bodies are not opened.",
+    "Input snapshots are already authorized shared data; these experiments do not test authentication or tenant enforcement.",
+    "Historical labels require the expected record version. Current states and historical snapshots use fixed fixture dates.",
+    "Graph methods can see explicit synthetic links; this measures retrieval given correct links, not extraction quality.",
+    "Abstention is only zero-result retrieval: unknown vocabulary or a known project with a missing fact. It does not measure answer-model refusal.",
+    "Sequential local timing is machine-dependent. p95 is descriptive for this sample; cache and import warmup are excluded.",
+    "QWAM is a classical NumPy simulation on bounded graphs, without a claimed speedup or retrieval advantage."
+  ],
+  "provenance": "https://github.com/omansharora5/Q-MDM-Quantum-Inspired-Multidimensional-Dynamic-Memory-/blob/main/artifacts/benchmarks/results.json",
+  "status": "Historical synthetic retrieval experiment; not a rerun of current code"
+}
