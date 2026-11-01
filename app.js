@@ -67,8 +67,6 @@
       });
     }, { threshold: .05 });
     document.querySelectorAll('.reveal').forEach(item => { item.classList.add('pending'); revealObserver.observe(item); });
-    const hero = document.querySelector('.hero');
-    if (hero) new IntersectionObserver(entries => entries.forEach(entry => hero.classList.toggle('offscreen', !entry.isIntersecting))).observe(hero);
   }
 
   document.querySelectorAll('.process-figure').forEach(figure => {

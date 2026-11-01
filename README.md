@@ -14,7 +14,7 @@ Run the portable resource and fragment-link checks with `node --test tests/site.
 
 ## Pages
 
-- `index.html`: portfolio, research index, hackathons, projects, experience, certificates, and education.
+- `index.html`: experience summary, seven visible projects, research index, hackathons, full skills, certificates, and education. Projects without public repository links remain visible as standalone cards. The original ATS checker, AI content detector, and e-commerce project are included.
 - `grandhack.html`: GrandHack at IPEC, VDMA project overview and gallery.
 - `binary-hack.html`: Binary Hack at RKGIT, VDMA project overview and gallery.
 - `meta-open-env.html`: existing Fab Yield Agent story, local demo video, and four event photographs.

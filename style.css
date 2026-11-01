@@ -365,81 +365,6 @@ nav a:hover{
 .pill-button span{
   font-size:19px
 }
-.hero-bottom{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  align-items:center;
-  border-top:1px solid #e3e0de;
-  padding-top:25px;
-  margin-top:auto
-}
-.hero-bottom>div:first-child{
-  display:flex;
-  align-items:center;
-  gap:22px
-}
-.pixel-number{
-  font-family:var(--mono);
-  font-size:78px;
-  font-weight:900;
-  line-height:1;
-  letter-spacing:-10px;
-  display:block;
-  font-variant-numeric:tabular-nums
-}
-.hero-bottom .micro{
-  font-size:9px;
-  color:var(--secondary);
-  max-width:90px
-}
-.hero-note{
-  position:relative;
-  padding-right:35px;
-  border-left:1px solid #e3e0de;
-  padding-left:24px
-}
-.hero-note .micro{
-  max-width:none
-}
-.hero-note p{
-  font-size:12px;
-  margin-top:8px;
-  line-height:1.5
-}
-.signal{
-  position:absolute;
-  right:0;
-  top:12px;
-  display:flex;
-  align-items:center;
-  gap:3px;
-  height:46px
-}
-.signal i{
-  height:8px;
-  width:3px;
-  background:var(--orange);
-  border-radius:3px;
-  animation:signal 1.8s ease-in-out infinite alternate
-}
-.signal i:nth-child(2n){
-  height:23px;
-  animation-delay:-.7s
-}
-.signal i:nth-child(3n){
-  height:35px;
-  animation-delay:-1.1s
-}
-.signal i:nth-child(4n){
-  height:15px;
-  animation-delay:-.4s
-}
-@keyframes signal{
-  to{
-    transform:scaleY(.35)
-  }
-}
 .section-heading{
   display:flex;
   align-items:flex-start;
@@ -612,7 +537,7 @@ a.achievement:hover{
   overflow:hidden;
   transition:transform .2s
 }
-.project:hover{
+.project[href]:hover{
   transform:translateY(-4px)
 }
 .project-display{
@@ -775,41 +700,6 @@ a.achievement:hover{
 .judge-display>b>span{
   color:var(--orange)
 }
-.more-projects{
-  border-bottom:1px solid var(--line);
-  margin-top:18px
-}
-.more-projects summary{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  min-height:60px;
-  cursor:pointer;
-  font-size:13px;
-  list-style:none
-}
-.more-projects summary::-webkit-details-marker{
-  display:none
-}
-.more-projects summary>span{
-  font-size:24px;
-  transition:transform .18s
-}
-.more-projects[open] summary>span{
-  transform:rotate(45deg)
-}
-.mini-project{
-  padding:22px 0;
-  border-top:1px solid var(--line)
-}
-.mini-project h3{
-  font-size:17px
-}
-.mini-project p{
-  font-size:13px;
-  color:var(--secondary);
-  margin-top:10px
-}
 .experience-panel{
   background:var(--white);
   padding:30px;
@@ -855,18 +745,6 @@ a.achievement:hover{
   padding:6px 10px;
   border:1px solid var(--line);
   border-radius:6px
-}
-.skills-panel{
-  padding:25px 5px
-}
-.skills-panel h3{
-  font-size:16px
-}
-.skills-panel p{
-  font-size:13px;
-  color:var(--secondary);
-  line-height:1.9;
-  margin-top:10px
 }
 .cert-grid{
   display:grid;
@@ -1362,9 +1240,6 @@ footer>a:last-child:hover{
 .enhanced .reveal{
   transition:opacity .6s var(--ease),transform .6s var(--ease),background .18s
 }
-.offscreen .signal i{
-  animation-play-state:paused
-}
 @keyframes appear{
   from{
     opacity:0;
@@ -1418,18 +1293,6 @@ footer>a:last-child:hover{
   .hero h2{
     font-size:clamp(60px,7vw,82px)
   }
-  .hero-note{
-    padding-left:16px
-  }
-  .hero-bottom>div:first-child{
-    gap:15px
-  }
-  .pixel-number{
-    font-size:65px
-  }
-  .hero-bottom .micro{
-    font-size:8px
-  }
   .sidebar-foot{
     gap:14px;
     padding-right:0
@@ -1463,18 +1326,6 @@ footer>a:last-child:hover{
   }
   .section-heading h2{
     font-size:27px
-  }
-  .hero-note p{
-    font-size:10px
-  }
-  .hero-note{
-    padding-right:20px
-  }
-  .signal{
-    gap:2px
-  }
-  .signal i{
-    width:2px
   }
   .hero-top{
     gap:8px
@@ -1582,19 +1433,6 @@ footer>a:last-child:hover{
   }
   .hero-top .micro{
     font-size:9px
-  }
-  .hero-bottom .micro{
-    font-size:9px
-  }
-  .hero-note p{
-    font-size:13px
-  }
-  .hero-note{
-    padding-right:40px;
-    padding-left:24px
-  }
-  .pixel-number{
-    font-size:78px
   }
   .main>section{
     margin-bottom:65px;
@@ -1729,44 +1567,6 @@ footer>a:last-child:hover{
     padding:12px 18px;
     font-size:11px;
     min-height:46px
-  }
-  .hero-bottom{
-    gap:16px;
-    padding-top:20px;
-    grid-template-columns:1fr 1fr
-  }
-  .hero-bottom>div:first-child{
-    display:block
-  }
-  .pixel-number{
-    font-size:62px;
-    letter-spacing:-7px;
-    margin-bottom:10px
-  }
-  .hero-bottom .micro{
-    font-size:7px;
-    max-width:none
-  }
-  .hero-note{
-    padding:0 0 0 15px
-  }
-  .hero-note p{
-    font-size:11px
-  }
-  .signal{
-    position:static;
-    margin-top:12px;
-    height:20px;
-    gap:3px
-  }
-  .signal i{
-    width:3px
-  }
-  .signal i:nth-child(3n){
-    height:22px
-  }
-  .signal i:nth-child(2n){
-    height:15px
   }
   .section-heading{
     gap:12px
@@ -2044,4 +1844,180 @@ html.reduced-motion{
   font-size:12px;
   color:var(--secondary);
   margin-top:10px
+}
+.overview .hero-title{
+  padding:26px 0 22px
+}
+.overview h2{
+  font-size:58px;
+  letter-spacing:-.04em;
+  line-height:1.03;
+  margin:18px 0 22px
+}
+.overview .hero-title>p{
+  max-width:700px;
+  font-size:15px;
+  line-height:1.75
+}
+.overview-experience{
+  display:block;
+  background:var(--ink);
+  color:#fbf1ec;
+  border-radius:20px;
+  padding:25px;
+  transition:transform .18s
+}
+.overview-experience:hover{
+  transform:translateY(-2px)
+}
+.overview-experience-top{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  color:#c6c1be
+}
+.overview-experience-top .micro{
+  font-size:9px
+}
+.overview-role{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  margin-top:20px
+}
+.overview-role h3{
+  font-size:26px;
+  letter-spacing:-.6px
+}
+.overview-role p{
+  font-size:14px;
+  margin-top:8px
+}
+.overview-role>span{
+  color:var(--orange);
+  font-size:25px
+}
+.overview-work{
+  font-size:13px;
+  color:#c6c1be;
+  line-height:1.65;
+  margin-top:15px
+}
+.overview-link{
+  display:inline-flex;
+  align-items:center;
+  gap:15px;
+  min-height:44px;
+  font-size:12px;
+  margin-top:4px
+}
+.overview-stats{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:16px
+}
+.overview-stats>a{
+  position:relative;
+  padding:17px 18px;
+  background:#eceae7;
+  border-radius:14px;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  transition:background .18s
+}
+.overview-stats>a:hover{
+  background:#dbd7d2
+}
+.overview-stats strong{
+  font-family:var(--mono);
+  font-size:34px;
+  line-height:1;
+  font-weight:500;
+  letter-spacing:-2px;
+  font-variant-numeric:tabular-nums
+}
+.overview-stats>a>span:nth-child(2){
+  font-size:12px;
+  color:var(--secondary)
+}
+.overview-stats>a>span:last-child{
+  position:absolute;
+  right:14px;
+  top:14px;
+  font-size:13px;
+  color:var(--secondary)
+}
+.overview-bio{
+  margin-top:auto;
+  padding-top:24px
+}
+.overview-bio p{
+  font-size:14px;
+  color:var(--secondary);
+  line-height:1.8
+}
+.overview-bio p+p{
+  margin-top:12px
+}
+.overview-bio strong{
+  font-weight:500;
+  color:var(--ink)
+}
+.archive-display{
+  background:#d5d1cb
+}
+.archive-display>b{
+  font-size:64px;
+  letter-spacing:-4px;
+  color:var(--secondary)
+}
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px
+}
+.skill-group{
+  background:var(--white);
+  border-radius:24px;
+  padding:26px
+}
+.skill-group h3{
+  font-size:19px;
+  letter-spacing:-.4px
+}
+.skill-group ul{
+  padding-left:18px;
+  margin:23px 0 0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  font-size:13px;
+  color:var(--secondary)
+}
+.skill-group li::marker{
+  color:var(--orange)
+}
+@media(max-width:1150px){
+  .overview h2{font-size:50px}
+  .overview .hero-title>p{font-size:14px}
+  .overview-role h3{font-size:23px}
+  .overview-stats>a{padding:16px 14px}
+}
+@media(max-width:520px){
+  .overview .hero-title{padding:24px 0}
+  .overview h2{font-size:42px}
+  .overview-experience{padding:22px}
+  .overview-experience-top{flex-wrap:wrap;gap:6px}
+  .overview-role h3{font-size:23px}
+  .overview-work{font-size:13px}
+  .overview-stats{gap:7px}
+  .overview-stats>a{padding:17px 12px;min-height:110px}
+  .overview-stats strong{font-size:30px}
+  .overview-stats>a>span:nth-child(2){font-size:11px;max-width:75px;line-height:1.4}
+  .overview-stats>a>span:last-child{top:10px;right:9px;font-size:11px}
+  .overview-bio p{font-size:14px}
+  .skills-grid{grid-template-columns:1fr}
+  .skill-group ul{font-size:14px}
 }

@@ -4,6 +4,16 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
+test('original projects and their existing destinations remain in the visible project section', () => {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const projects = html.split('<section id="projects">')[1].split('</section>')[0];
+  for (const title of ['AI Realtime CCTV Crime Detector', 'RL Environment for Semiconductor Yield', 'AI Judge', 'AI-Based ATS Checker', 'AI Content Detector', 'E-Commerce Website']) {
+    assert(projects.includes(title), 'Missing original project: ' + title);
+  }
+  assert(!projects.includes('<details'), 'Original projects should not require expanding a disclosure');
+  assert(projects.includes('href="meta-open-env.html"'));
+  assert(projects.includes('href="https://landing-page3-liard.vercel.app/"'));
+});
 test('existing portfolio section bookmarks remain available', () => {
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   for (const id of ['about', 'achievements', 'experience', 'projects', 'skills', 'certifications', 'education']) {
