@@ -10,7 +10,7 @@ python -m http.server 4173 --bind 127.0.0.1
 
 Open `http://127.0.0.1:4173`. Production is https://pp-website-seven.vercel.app and deploys the repository root from `main`. The repository is https://github.com/omansharora5/omansh-arora.
 
-Run the portable resource and fragment-link checks with `node --test tests/site.test.cjs`. Browser verification also covered all 23 pages at 375, 768, 1024, and 1440 pixels, event links from both sections, dial navigation, motion preferences, keyboard process selection, the Meta image dialog, and existing video metadata. External services and the pending VDMA images are outside those checks. The public production deployment was verified on 1 November 2026 using the browser checks described above. The manual motion button is absent, old saved pause settings are ignored, and the site title is Omansh Arora. Preview deployments may require the owner's Vercel sign-in.
+Run the portable resource and fragment-link checks with `node --test tests/site.test.cjs`. Browser verification also covered all 24 pages at 375, 768, 1024, and 1440 pixels, event links from both sections, dial navigation, motion preferences, keyboard process selection, the Meta image dialog, and existing video metadata. External services and the pending VDMA images are outside those checks. The public production deployment was verified on 1 November 2026 using the browser checks described above. The manual motion button is absent, old saved pause settings are ignored, and the site title is Omansh Arora. Preview deployments may require the owner's Vercel sign-in.
 
 ## Pages
 
@@ -18,11 +18,11 @@ Run the portable resource and fragment-link checks with `node --test tests/site.
 - `grandhack.html`: GrandHack at IPEC, VDMA project overview and gallery.
 - `binary-hack.html`: Binary Hack at RKGIT, VDMA project overview and gallery.
 - `meta-open-env.html`: existing Fab Yield Agent story, local demo video, and four event photographs.
-- `research/`: five white research notes with selectable process steps.
+- `research/`: six white research notes with selectable process steps, including an ongoing Cactus-based English speech compression and ESP32 deployment experiment. No completed ESP32 port is claimed.
 - `projects/`: eleven project pages, including HackRelay, SAAR, RefineOps, Steadystep, and the existing e-commerce project.
 - `iit-roorkee.html`, `aws-hackathon.html`, and `eightfold-hackathon.html`: additional hackathon stories. All six event cards share the same appearance and open a story in a new tab.
 
-The interface adapts the user's Blockit reference: grey surfaces, white displays, rounded control groups, orange indicators, and a section dial. The dial rotates continuously with page scrolling in both directions and stops under reduced-motion preferences. Its arrow buttons provide the same navigation without a mouse wheel. Motion follows the operating system's reduced-motion setting. There is no manual motion button.
+The interface adapts the user's Blockit reference: grey surfaces, white displays, rounded control groups, orange indicators, and a section dial. The dial has a fixed semicircular scale and a moving needle. The needle points upward at the top, right at the midpoint, and downward at the bottom of the page. It remains visible at narrow widths. Scroll progress stays accurate with reduced motion, without added animation. Its arrow buttons provide the same navigation without a mouse wheel. Motion follows the operating system's reduced-motion setting. There is no manual motion button.
 
 ## Add the VDMA event photos
 
@@ -50,3 +50,5 @@ VDMA source links are intentionally absent. Its repository stays private while t
 The Q-MDM and memory notes summarize the existing project records. Quantum-inspired retrieval is a classical numerical simulation, with no demonstrated quality advantage in the recorded synthetic comparison. Creative speculation and the general manufacturing harness are early research directions. The semiconductor gym is a simulated hackathon prototype. The notes describe proposed experiments separately from implemented behavior; they make no claims of published papers, institutional affiliation, or real-factory validation.
 
 The certificate and experience entries retain the owner's existing portfolio record. The new GrandHack and Binary Hack names and wins use the owner's corrections. Exact event dates and event-specific VDMA changes still need the owner's event records.
+
+The browser regression in `tests/scroll-needle.cjs` accepts an existing Playwright Page and site URL. It checks actual rendered tip positions and viewport visibility at the top, midpoint, bottom, and after scrolling back, at desktop, tablet, and phone widths. It also checks functional progress with reduced motion enabled.

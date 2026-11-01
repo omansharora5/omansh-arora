@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English-only speech on ESP32 | Omansh Arora</title>
+<meta name="description" content="An ongoing Cactus-based speech-model compression experiment, exploring English-focused pruning and local transcription on ESP32 hardware.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<script src="../app.js" defer></script>
+</head>
+<body class="paper">
+<a class="skip-link" href="#main">Skip to content</a><header class="page-top"><a class="wordmark" href="../index.html" aria-label="Omansh Arora, home">oa<span>.</span></a><span class="micro">Research note / 06</span><a class="back" href="../index.html">← Portfolio</a></header><main id="main" class="research-page"><div class="note-heading">
+<span class="micro">Ongoing work / Cactus V2 / Embedded AI</span><h1>English-only speech on ESP32</h1>
+<p class="lede">I am exploring whether a small speech-to-text model in the Cactus ecosystem can be reduced to an English-focused version small enough for an ESP32. The goal is local transcription on a microcontroller. The port is still in progress.</p>
+<div class="note-meta">
+<span>Omansh Arora</span><span>Updated 1 November 2026</span>
+</div>
+</div>
+<div class="research-question">
+<span class="micro">The question</span><h2>How much model capacity can I remove while preserving English transcription and fitting the target ESP32?</h2>
+</div>
+<section class="note-section"><span class="micro">01 / Idea</span><h2>The working idea</h2>
+<p>The approach is to identify parameters with little value for English transcription and test pruning them. I need to establish whether those parameters can be separated and how each reduction affects recognition. Model size, memory use, and transcription quality have to be measured together.</p></section><figure class="process-figure"><figcaption class="micro">A sketch of the process · Select a step</figcaption><div class="flow" aria-label="Process steps">
+<button class="flow-step" aria-pressed="true" data-explanation="Measure English transcription quality and the original model footprint."><span class="micro">01</span><strong>Baseline</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Test which parameters can be removed without unacceptable loss on English speech."><span class="micro">02</span><strong>Prune</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Compare model size, memory use, and word error rate after each change."><span class="micro">03</span><strong>Measure</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Attempt the embedded implementation and measure it on the target ESP32."><span class="micro">04</span><strong>Port</strong><span aria-hidden="true">→</span></button>
+</div>
+<p class="flow-explanation" aria-live="polite">Measure English transcription quality and the original model footprint.</p></figure><section class="note-section"><span class="micro">02 / Current process</span><h2>Where the work stands</h2>
+<p>I am currently working on the model-reduction approach and the embedded port. I have not completed the ESP32 deployment. English-only pruning is the experiment I am testing, not a finished result.</p></section><section class="note-section"><span class="micro">03 / Next experiment</span><h2>What I want to test next</h2>
+<p>Establish an English transcription baseline, compare each pruning or compression candidate against it, then measure model size, peak memory, word error rate, and inference time. Test the resulting model on the exact target ESP32 board before claiming that it fits or runs usefully.</p></section><aside class="research-limit"><span class="micro">Scope &amp; limits</span><p>This is an ongoing feasibility experiment. The exact model checkpoint and target board need to be recorded with the measurements. Removing non-English capability alone does not establish that the model will fit or run on an ESP32.</p></aside><div class="note-links">
+<a class="text-link" href="https://docs.cactuscompute.com/v2.0.1/" target="_blank" rel="noopener noreferrer">Cactus engine documentation <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.cactuscompute.com/" target="_blank" rel="noopener noreferrer">Cactus model family <span aria-hidden="true">↗</span></a>
+</div>
+<a class="back end-link" href="../index.html#research">← All research directions</a></main><footer><a class="wordmark" href="../index.html">oa<span>.</span></a><p>Omansh Arora · Delhi NCR, India</p>
+<a href="mailto:arora.omansh5@gmail.com">Get in touch ↗</a></footer>
+</body>
+</html>

@@ -4,6 +4,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
+
+test('the removed research-internship notice stays absent', () => {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  assert(!html.includes('Open to research internships'));
+});
 test('original projects and their resource destinations remain available', () => {
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const projects = html.split('<section id="projects">')[1].split('</section>')[0];

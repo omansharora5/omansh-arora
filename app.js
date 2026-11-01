@@ -11,7 +11,7 @@
   const links = [...document.querySelectorAll('nav a')];
   const previous = document.getElementById('previousSection');
   const next = document.getElementById('nextSection');
-  const wheel = document.getElementById('dialWheel');
+  const needle = document.getElementById('dialNeedle');
   const counter = document.getElementById('sectionCounter');
   let active = 0;
   function markSection(index) {
@@ -33,7 +33,11 @@
     let scheduled = false;
     function syncScroll() {
       scheduled = false;
-      if (wheel) wheel.style.transform = `rotate(${motionPreference.matches ? 0 : -scrollY * .12}deg)`;
+      if (needle) {
+        const distance = document.documentElement.scrollHeight - innerHeight;
+        const progress = distance > 0 ? Math.max(0, Math.min(1, scrollY / distance)) : 0;
+        needle.setAttribute('transform', `rotate(${progress * 180} 13 125)`);
+      }
       const reference = Math.min(innerHeight * .28, 230);
       let index = 0;
       sections.forEach((section, i) => { if (section.getBoundingClientRect().top <= reference) index = i; });
@@ -48,16 +52,6 @@
     syncScroll();
     previous?.addEventListener('click', () => moveSection(-1));
     next?.addEventListener('click', () => moveSection(1));
-    let lastWheel = 0;
-    document.querySelector('.dial')?.addEventListener('wheel', event => {
-      if (Math.abs(event.deltaY) < 3) return;
-      const direction = Math.sign(event.deltaY);
-      if ((active === 0 && direction < 0) || (active === sections.length - 1 && direction > 0)) return;
-      event.preventDefault();
-      if (performance.now() - lastWheel < 700) return;
-      lastWheel = performance.now();
-      moveSection(direction);
-    }, { passive: false });
   }
 
   if ('IntersectionObserver' in window) {
