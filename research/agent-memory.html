@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Memory between agents | Omansh Arora</title>
+<meta name="description" content="Recall the evidence you need, when you need it.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<script src="../app.js" defer></script>
+</head>
+<body class="paper">
+<a class="skip-link" href="#main">Skip to content</a><header class="page-top"><a class="wordmark" href="../index.html" aria-label="Omansh Arora, home">oa<span>.</span></a><span class="micro">Research note / 03</span><a class="back" href="../index.html">← Portfolio</a></header><main id="main" class="research-page"><div class="note-heading">
+<span class="micro">Ongoing work / Working foundation</span><h1>Memory between agents</h1>
+<p class="lede">An agent should be able to pick up a task without reading the whole conversation again. I am building memory that lives outside any one model, with sources and revisions that another agent can inspect.</p>
+<div class="note-meta">
+<span>Omansh Arora</span><span>Updated 1 November 2026</span>
+</div>
+</div>
+<div class="research-question">
+<span class="micro">The question</span><h2>Can progressive recall preserve task continuity while keeping the active context small?</h2>
+</div>
+<section class="note-section"><span class="micro">01 / Idea</span><h2>The working idea</h2>
+<p>Store messages, decisions, episodes, and procedures as separate records. Retrieve compact memory handles first. Expand an exact version only when the task needs its evidence. PACE combines lexical relevance and graph connections under a character budget.</p></section><figure class="process-figure"><figcaption class="micro">A sketch of the process · Select a step</figcaption><div class="flow" aria-label="Process steps">
+<button class="flow-step" aria-pressed="true" data-explanation="Save a source message or a decision with its provenance."><span class="micro">01</span><strong>Record</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Return small handles relevant to the current task."><span class="micro">02</span><strong>Recall</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Open the exact source and version only when needed."><span class="micro">03</span><strong>Expand</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Pass a checkpoint and memory references to the next agent."><span class="micro">04</span><strong>Handoff</strong><span aria-hidden="true">→</span></button>
+</div>
+<p class="flow-explanation" aria-live="polite">Save a source message or a decision with its provenance.</p></figure><section class="note-section"><span class="micro">02 / Current process</span><h2>Where the work stands</h2>
+<p>The Q-MDM service, built with the mnemograph package, exposes memory through MCP and REST. It supports source-backed records, bounded recall, exact-version expansion, checkpoints, and task handoffs. SQLite is the supported local default.</p></section><section class="note-section"><span class="micro">03 / Next experiment</span><h2>What I want to test next</h2>
+<p>Measure cross-session tasks with two independent agents. Track missed decisions, stale revisions, handoff correctness, and context size. Compare progressive recall against a simple retrieval baseline.</p></section><aside class="research-limit"><span class="micro">Scope &amp; limits</span><p>The current budget counts characters, not model tokens. The hosted demo uses temporary storage. Neither the demo nor retrieval alone proves that a model uses evidence correctly.</p></aside><div class="note-links"><a class="text-link" href="https://github.com/omansharora5/Q-MDM-Quantum-Inspired-Multidimensional-Dynamic-Memory-" target="_blank" rel="noopener noreferrer">Read the implementation <span aria-hidden="true">↗</span></a></div>
+<a class="back end-link" href="../index.html#research">← All research directions</a></main><footer><a class="wordmark" href="../index.html">oa<span>.</span></a><p>Omansh Arora · Delhi NCR, India</p>
+<a href="mailto:arora.omansh5@gmail.com">Get in touch ↗</a></footer>
+</body>
+</html>
