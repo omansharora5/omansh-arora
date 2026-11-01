@@ -1,26 +1,11 @@
 (() => {
   const root = document.documentElement;
   const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
-  const toggle = document.getElementById('motionToggle');
-  let manuallyPaused = false;
-  try { manuallyPaused = localStorage.getItem('portfolio-motion') === 'paused'; } catch {}
   function applyMotion() {
-    const paused = motionPreference.matches || manuallyPaused;
-    root.classList.toggle('reduced-motion', paused);
-    if (toggle) {
-      toggle.textContent = paused ? 'Motion off' : 'Motion on';
-      toggle.setAttribute('aria-pressed', String(paused));
-      toggle.setAttribute('aria-label', motionPreference.matches ? 'Motion disabled by your system preference' : (paused ? 'Enable motion' : 'Pause motion'));
-      toggle.disabled = motionPreference.matches;
-    }
+    root.classList.toggle('reduced-motion', motionPreference.matches);
   }
   applyMotion();
   motionPreference.addEventListener('change', applyMotion);
-  toggle?.addEventListener('click', () => {
-    manuallyPaused = !manuallyPaused;
-    try { localStorage.setItem('portfolio-motion', manuallyPaused ? 'paused' : 'enabled'); } catch {}
-    applyMotion();
-  });
 
   const sections = [...document.querySelectorAll('.main > section[id]')];
   const links = [...document.querySelectorAll('nav a')];

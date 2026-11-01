@@ -289,16 +289,6 @@ nav a:hover{
 .sidebar-foot>a:hover{
   text-decoration:underline
 }
-.motion-toggle{
-  margin-left:auto;
-  background:transparent;
-  border:1px solid var(--line);
-  font-family:var(--mono);
-  font-size:9px;
-  padding:8px;
-  border-radius:8px;
-  min-height:36px
-}
 .main{
   min-width:0
 }
@@ -1444,9 +1434,6 @@ footer>a:last-child:hover{
     gap:14px;
     padding-right:0
   }
-  .motion-toggle{
-    margin-left:0
-  }
   .experience-panel{
     grid-template-columns:1fr;
     gap:20px
@@ -1669,9 +1656,6 @@ footer>a:last-child:hover{
     grid-column:1/-1;
     min-height:180px
   }
-  .motion-toggle{
-    min-height:36px
-  }
 }
 @media(max-width:520px){
   .portfolio-layout{
@@ -1709,11 +1693,6 @@ footer>a:last-child:hover{
   }
   .sidebar-foot>a{
     font-size:10px
-  }
-  .motion-toggle{
-    font-size:8px;
-    min-height:33px;
-    padding:6px
   }
   .navigation-unit nav a{
     padding:10px 12px

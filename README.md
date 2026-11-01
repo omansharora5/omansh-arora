@@ -20,7 +20,7 @@ Run the portable resource and fragment-link checks with `node --test tests/site.
 - `meta-open-env.html`: existing Fab Yield Agent story, local demo video, and four event photographs.
 - `research/`: five white research notes with selectable process steps.
 
-The interface adapts the user's Blockit reference: grey surfaces, white displays, rounded control groups, orange indicators, and a section dial. The dial follows the active section. Its arrow buttons provide the same navigation without a mouse wheel. Motion respects the operating system's reduced-motion setting; the manual pause setting persists when browser storage is available.
+The interface adapts the user's Blockit reference: grey surfaces, white displays, rounded control groups, orange indicators, and a section dial. The dial follows the active section. Its arrow buttons provide the same navigation without a mouse wheel. Motion follows the operating system's reduced-motion setting. There is no manual motion button.
 
 ## Add the VDMA event photos
 
