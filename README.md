@@ -8,9 +8,9 @@ Run a local preview from this directory:
 python -m http.server 4173 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:4173`. The existing Vercel deployment can serve the repository root as a static site.
+Open `http://127.0.0.1:4173`. Production is https://pp-website-seven.vercel.app and deploys the repository root from `main`. The repository is https://github.com/omansharora5/omansh-arora.
 
-Run the portable resource and fragment-link checks with `node --test tests/site.test.cjs`. Browser verification also covered all nine pages at 375, 768, 1024, and 1440 pixels, event links from both sections, dial navigation, motion preferences, keyboard process selection, the Meta image dialog, and existing video metadata. External services and the pending VDMA images are outside those checks. The Vercel review deployment builds successfully but requires the owner's Vercel sign-in, so deployed UI behavior has not been independently verified.
+Run the portable resource and fragment-link checks with `node --test tests/site.test.cjs`. Browser verification also covered all nine pages at 375, 768, 1024, and 1440 pixels, event links from both sections, dial navigation, motion preferences, keyboard process selection, the Meta image dialog, and existing video metadata. External services and the pending VDMA images are outside those checks. The public production deployment was verified on 1 November 2026 using the browser checks described above. The manual motion button is absent, old saved pause settings are ignored, and the site title is Omansh Arora. Preview deployments may require the owner's Vercel sign-in.
 
 ## Pages
 
