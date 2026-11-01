@@ -4,6 +4,12 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
+test('existing portfolio section bookmarks remain available', () => {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  for (const id of ['about', 'achievements', 'experience', 'projects', 'skills', 'certifications', 'education']) {
+    assert(html.includes('id="' + id + '"'), 'Missing existing section #' + id);
+  }
+});
 function htmlFiles(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
     if (entry.name.startsWith('.') || entry.name === 'tests') return [];

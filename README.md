@@ -10,7 +10,7 @@ python -m http.server 4173 --bind 127.0.0.1
 
 Open `http://127.0.0.1:4173`. The existing Vercel deployment can serve the repository root as a static site.
 
-Run the portable resource and fragment-link checks with `node --test tests/site.test.cjs`. Browser verification also covered all nine pages at 375, 768, 1024, and 1440 pixels, event links from both sections, dial navigation, motion preferences, keyboard process selection, the Meta image dialog, and existing video metadata. External services and the pending VDMA images are outside those checks.
+Run the portable resource and fragment-link checks with `node --test tests/site.test.cjs`. Browser verification also covered all nine pages at 375, 768, 1024, and 1440 pixels, event links from both sections, dial navigation, motion preferences, keyboard process selection, the Meta image dialog, and existing video metadata. External services and the pending VDMA images are outside those checks. The Vercel review deployment builds successfully but requires the owner's Vercel sign-in, so deployed UI behavior has not been independently verified.
 
 ## Pages
 
