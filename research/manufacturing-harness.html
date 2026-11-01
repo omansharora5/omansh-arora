@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A harness for manufacturing | Omansh Arora</title>
+<meta name="description" content="Give a manufacturing agent a usable workbench.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<script src="../app.js" defer></script>
+</head>
+<body class="paper">
+<a class="skip-link" href="#main">Skip to content</a><header class="page-top"><a class="wordmark" href="../index.html" aria-label="Omansh Arora, home">oa<span>.</span></a><span class="micro">Research note / 04</span><a class="back" href="../index.html">← Portfolio</a></header><main id="main" class="research-page"><div class="note-heading">
+<span class="micro">Ongoing work / Early design</span><h1>A harness for manufacturing</h1>
+<p class="lede">I am exploring what an agent needs around it to help with manufacturing work. The starting point is the work itself: inspect a process, propose a change, test it, and leave a record another person can review.</p>
+<div class="note-meta">
+<span>Omansh Arora</span><span>Updated 1 November 2026</span>
+</div>
+</div>
+<div class="research-question">
+<span class="micro">The question</span><h2>What tools, constraints, and feedback let an agent help with a manufacturing task reliably?</h2>
+</div>
+<section class="note-section"><span class="micro">01 / Idea</span><h2>The working idea</h2>
+<p>The proposed harness connects process observations, permitted actions, experiment records, and review. It should make an agent's choices inspectable and keep simulation results separate from evidence collected on a real process.</p></section><figure class="process-figure"><figcaption class="micro">A sketch of the process · Select a step</figcaption><div class="flow" aria-label="Process steps">
+<button class="flow-step" aria-pressed="true" data-explanation="Collect the process state and the relevant constraints."><span class="micro">01</span><strong>Observe</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Propose one permitted action with an inspectable reason."><span class="micro">02</span><strong>Plan</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Run the change in simulation and preserve the result."><span class="micro">03</span><strong>Test</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Present the action and evidence for a human decision."><span class="micro">04</span><strong>Review</strong><span aria-hidden="true">→</span></button>
+</div>
+<p class="flow-explanation" aria-live="polite">Collect the process state and the relevant constraints.</p></figure><section class="note-section"><span class="micro">02 / Current process</span><h2>Where the work stands</h2>
+<p>This is a design direction informed by the semiconductor hackathon project. A general manufacturing harness has not been validated. I am narrowing the first workflow rather than claiming support for an entire factory.</p></section><section class="note-section"><span class="micro">03 / Next experiment</span><h2>What I want to test next</h2>
+<p>Choose one process task, define observations and allowed actions, and build a repeatable simulated workflow. Compare manual tool use with the agent-assisted workflow on task completion, invalid actions, and review effort.</p></section><aside class="research-limit"><span class="micro">Scope &amp; limits</span><p>This proposed harness is a work environment for an agent. The semiconductor gym is a separate environment for training and evaluating its behavior. Neither establishes real factory readiness.</p></aside><a class="back end-link" href="../index.html#research">← All research directions</a></main><footer><a class="wordmark" href="../index.html">oa<span>.</span></a><p>Omansh Arora · Delhi NCR, India</p>
+<a href="mailto:arora.omansh5@gmail.com">Get in touch ↗</a></footer>
+</body>
+</html>

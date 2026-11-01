@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quantum-inspired memory | Omansh Arora</title>
+<meta name="description" content="Can interference help an agent find the right memory?">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<script src="../app.js" defer></script>
+</head>
+<body class="paper">
+<a class="skip-link" href="#main">Skip to content</a><header class="page-top"><a class="wordmark" href="../index.html" aria-label="Omansh Arora, home">oa<span>.</span></a><span class="micro">Research note / 01</span><a class="back" href="../index.html">← Portfolio</a></header><main id="main" class="research-page"><div class="note-heading">
+<span class="micro">Ongoing work / Prototype + evaluation</span><h1>Quantum-inspired memory</h1>
+<p class="lede">I want an agent to remember more than the words closest to its question. A useful memory may sit a few relationships away, behind a decision or an earlier event. Q-MDM is where I am testing that idea.</p>
+<div class="note-meta">
+<span>Omansh Arora</span><span>Updated 1 November 2026</span>
+</div>
+</div>
+<div class="research-question">
+<span class="micro">The question</span><h2>Does a quantum-inspired walk retrieve useful evidence that simpler graph methods miss?</h2>
+</div>
+<section class="note-section"><span class="micro">01 / Idea</span><h2>The working idea</h2>
+<p>A memory is a node with a source, time, and relationships. On a small candidate graph, a numerical quantum walk evolves complex amplitudes across those connections. The squared magnitudes become retrieval scores. This is a classical simulation on ordinary hardware.</p></section><figure class="process-figure"><figcaption class="micro">A sketch of the process · Select a step</figcaption><div class="flow" aria-label="Process steps">
+<button class="flow-step" aria-pressed="true" data-explanation="Start with a task question and find a few relevant anchor memories."><span class="micro">01</span><strong>Cue</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Build a bounded neighborhood of sourced, related records."><span class="micro">02</span><strong>Connections</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Simulate amplitude evolution and average the resulting node probabilities."><span class="micro">03</span><strong>Walk</strong><span aria-hidden="true">→</span></button><button class="flow-step" aria-pressed="false" data-explanation="Rank candidates, then open the exact source before using a memory."><span class="micro">04</span><strong>Evidence</strong><span aria-hidden="true">→</span></button>
+</div>
+<p class="flow-explanation" aria-live="polite">Start with a task question and find a few relevant anchor memories.</p></figure><section class="note-section"><span class="micro">02 / Current process</span><h2>Where the work stands</h2>
+<p>Q-MDM already has a shared memory service, versioned records, source expansion, and retrieval traces. The current quantum-walk strategy runs on a bounded graph using NumPy. In the recorded synthetic comparison, graph methods tied on retrieval quality. I have not established a quantum-walk advantage.</p></section><section class="note-section"><span class="micro">03 / Next experiment</span><h2>What I want to test next</h2>
+<p>Test on less curated graphs with indirect cues, stale facts, contradictions, and missing answers. Compare lexical search, personalized PageRank, PACE, and quantum-walk retrieval at the same context budget. Report retrieval quality and computation time separately.</p></section><aside class="research-limit"><span class="micro">Scope &amp; limits</span><p>The quantum part is a mathematical model. There is no quantum processor or demonstrated speedup. The diagram below explains retrieval; it is not a live benchmark.</p></aside><div class="note-links">
+<a class="text-link" href="https://github.com/omansharora5/Q-MDM-Quantum-Inspired-Multidimensional-Dynamic-Memory-" target="_blank" rel="noopener noreferrer">Read the Q-MDM source <span aria-hidden="true">↗</span></a><a class="text-link" href="https://qmdm-quantum-memory.vercel.app" target="_blank" rel="noopener noreferrer">Explore the demo <span aria-hidden="true">↗</span></a>
+</div>
+<a class="back end-link" href="../index.html#research">← All research directions</a></main><footer><a class="wordmark" href="../index.html">oa<span>.</span></a><p>Omansh Arora · Delhi NCR, India</p>
+<a href="mailto:arora.omansh5@gmail.com">Get in touch ↗</a></footer>
+</body>
+</html>
