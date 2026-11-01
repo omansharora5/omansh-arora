@@ -4,15 +4,26 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-test('original projects and their existing destinations remain in the visible project section', () => {
+test('original projects and their resource destinations remain available', () => {
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const projects = html.split('<section id="projects">')[1].split('</section>')[0];
   for (const title of ['AI Realtime CCTV Crime Detector', 'RL Environment for Semiconductor Yield', 'AI Judge', 'AI-Based ATS Checker', 'AI Content Detector', 'E-Commerce Website']) {
     assert(projects.includes(title), 'Missing original project: ' + title);
   }
   assert(!projects.includes('<details'), 'Original projects should not require expanding a disclosure');
-  assert(projects.includes('href="meta-open-env.html"'));
-  assert(projects.includes('href="https://landing-page3-liard.vercel.app/"'));
+  assert(projects.includes('href="projects/fab-yield-agent.html"'));
+  assert(projects.includes('href="projects/ai-judge.html"'));
+  assert(fs.readFileSync(path.join(root, 'projects/fab-yield-agent.html'), 'utf8').includes('href="../meta-open-env.html"'));
+  assert(fs.readFileSync(path.join(root, 'projects/ai-judge.html'), 'utf8').includes('href="https://landing-page3-liard.vercel.app/"'));
+});
+
+test('every hackathon has a new-tab story with the same result-badge markup', () => {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const events = html.split('<div class="achievement-list">')[1].split('</section>')[0];
+  assert.equal([...events.matchAll(/<a class="achievement"[^>]*target="_blank"/g)].length, 6);
+  assert(!events.includes('<article'));
+  assert(!events.includes('badge muted'));
+  assert(events.includes('href="eightfold-hackathon.html"'));
 });
 test('existing portfolio section bookmarks remain available', () => {
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');

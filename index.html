@@ -29,6 +29,7 @@
 <div class="dial-wheel" id="dialWheel">
 <div class="dial-ticks"></div>
 <span class="dial-hub"></span>
+<span class="dial-reference"></span>
 </div>
 <span class="dial-marker"></span>
 </div>
@@ -65,7 +66,7 @@
     <span class="overview-link">View experience <span aria-hidden="true">→</span></span>
   </a>
   <div class="overview-stats" aria-label="Portfolio summary">
-    <a href="#projects"><strong>07</strong><span>Projects</span><span aria-hidden="true">↗</span></a>
+    <a href="#projects"><strong>11</strong><span>Projects</span><span aria-hidden="true">↗</span></a>
     <a href="#achievements"><strong>06</strong><span>Hackathons</span><span aria-hidden="true">↗</span></a>
     <a href="#research"><strong>05</strong><span>Research directions</span><span aria-hidden="true">↗</span></a>
   </div>
@@ -134,97 +135,118 @@
 </div>
 </div>
 <div class="achievement-list">
-<a class="achievement reveal" href="grandhack.html" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">01</span><div>
+<a class="achievement" href="grandhack.html" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">01</span><div>
 <span class="badge">Winner</span><h3>GrandHack</h3>
-<p>IPEC · VDMA</p>
+<p>IPEC · Presented VDMA, a computer vision pipeline for possible incident detection, saved evidence clips, and human review.</p>
 </div>
-<span aria-hidden="true">↗</span></a><a class="achievement reveal" href="binary-hack.html" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">02</span><div>
+<span aria-hidden="true">↗</span></a><a class="achievement" href="binary-hack.html" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">02</span><div>
 <span class="badge">Winner</span><h3>Binary Hack</h3>
-<p>RKGIT · VDMA</p>
+<p>RKGIT · Won with VDMA, developing the same camera-to-review project further between the two events.</p>
 </div>
-<span aria-hidden="true">↗</span></a><a class="achievement reveal" href="pi5.jpg" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">03</span><div>
+<span aria-hidden="true">↗</span></a><a class="achievement" href="iit-roorkee.html" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">03</span><div>
 <span class="badge">Winner</span><h3>National Hackathon</h3>
 <p>Won the national-level hackathon hosted by IIT Roorkee with Juwi, an AI-augmented hackathon judging platform designed to process thousands of submissions.</p>
 </div>
-<span aria-hidden="true">↗</span></a><a class="achievement reveal" href="meta-open-env.html" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">04</span><div>
+<span aria-hidden="true">↗</span></a><a class="achievement" href="meta-open-env.html" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">04</span><div>
 <span class="badge">Finalist</span><h3>Meta Open Environment</h3>
 <p>Finalist in Meta's Open Environment hackathon, hosted on Hugging Face, competing on open-ended AI and systems challenges at an international level.</p>
 </div>
-<span aria-hidden="true">↗</span></a><a class="achievement reveal" href="https://landing-page3-liard.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">05</span><div>
+<span aria-hidden="true">↗</span></a><a class="achievement" href="aws-hackathon.html" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">05</span><div>
 <span class="badge">Finalist</span><h3>Amazon AWS Hackathon</h3>
 <p>Selected as a finalist in the AWS-sponsored hackathon at IIT Kanpur, building cloud-native AI solutions under competition constraints.</p>
 </div>
-<span aria-hidden="true">↗</span></a><article class="achievement reveal"><span class="win-number" aria-hidden="true">06</span><div>
-<span class="badge muted">Finalist</span><h3>Eightfold AI Hackathon</h3>
+<span aria-hidden="true">↗</span></a><a class="achievement" href="eightfold-hackathon.html" target="_blank" rel="noopener noreferrer"><span class="win-number" aria-hidden="true">06</span><div>
+<span class="badge">Finalist</span><h3>Eightfold AI Hackathon</h3>
 <p>Reached the finals of Eightfold's AI hackathon at IIT Kanpur, focused on talent intelligence and AI-driven workforce solutions.</p>
-</div></article>
+</div>
+<span aria-hidden="true">↗</span></a>
 </div></section>
 <section id="projects"><div class="section-heading">
 <span class="section-index">05</span><div><h2>Projects</h2></div>
 </div>
 <div class="project-grid">
-<a class="project reveal" href="grandhack.html"><div class="project-display vision-display" aria-hidden="true">
+<a class="project reveal" href="projects/vdma.html" target="_blank" rel="noopener noreferrer" aria-label="Open AI Realtime CCTV Crime Detector in a new tab"><div class="project-display vision-display" aria-hidden="true">
 <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span><div class="vision-target">
 <i></i><i></i><i></i>
 </div>
 <span>VDMA / VMD Shield</span>
 </div>
 <div class="project-copy">
-<span class="micro">01 / Computer vision</span><h3>AI Realtime CCTV Crime Detector <span aria-hidden="true">↗</span>
-</h3>
-<p>Real-time computer vision system that analyzes CCTV feeds to detect and flag possible criminal activity using object detection and behavioral analysis. The project continues as VDMA / VMD Shield.</p>
-<span class="micro">Computer Vision · Real-time ML · Python</span>
-</div></a>
-<a class="project reveal" href="research/agent-memory.html"><div class="project-display memory-display" aria-hidden="true">
+<span class="micro">01 / Working prototype</span><h3>AI Realtime CCTV Crime Detector</h3>
+<p>Real-time computer vision for camera footage, possible incident detection, and evidence review. Developed as VDMA / VMD Shield across two hackathon wins.</p>
+<span class="micro">Computer Vision · Real-time ML · Python</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/q-mdm.html" target="_blank" rel="noopener noreferrer" aria-label="Open Q-MDM in a new tab"><div class="project-display memory-display" aria-hidden="true">
 <span class="memory-node n1"></span><span class="memory-node n2"></span><span class="memory-node n3"></span><span class="memory-node n4"></span><span class="memory-node n5"></span><svg viewbox="0 0 400 180"><path d="M100 90L200 40L300 90L200 140L100 90L300 90M200 40V140"></path></svg><span>Q-MDM / Shared recall</span>
 </div>
 <div class="project-copy">
-<span class="micro">02 / Agent memory</span><h3>Q-MDM <span aria-hidden="true">↗</span>
-</h3>
+<span class="micro">02 / Working foundation</span><h3>Q-MDM</h3>
 <p>Shared, versioned memory with source evidence, progressive recall, and task handoffs between independent agents.</p>
-<span class="micro">Python · MCP · REST</span>
-</div></a>
-<a class="project reveal" href="meta-open-env.html"><div class="project-display fab-display" aria-hidden="true">
+<span class="micro">Python · MCP · REST · Graph retrieval</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/fab-yield-agent.html" target="_blank" rel="noopener noreferrer" aria-label="Open RL Environment for Semiconductor Yield in a new tab"><div class="project-display fab-display" aria-hidden="true">
 <div class="wafer"></div>
 <span>Fab Yield Agent / 12 experiments</span>
 </div>
 <div class="project-copy">
-<span class="micro">03 / Reinforcement learning</span><h3>RL Environment for Semiconductor Yield <span aria-hidden="true">↗</span>
-</h3>
-<p>Reinforcement learning simulation environment modelling semiconductor fabrication yield optimization for RL-driven process control. Presented as Fab Yield Agent at the Meta Open Environment hackathon.</p>
-<span class="micro">Reinforcement Learning · Simulation · Python</span>
-</div></a>
-<a class="project reveal" href="https://landing-page3-liard.vercel.app/" target="_blank" rel="noopener noreferrer"><div class="project-display judge-display" aria-hidden="true">
+<span class="micro">03 / Hackathon prototype</span><h3>RL Environment for Semiconductor Yield</h3>
+<p>Reinforcement learning simulation environment modelling semiconductor fabrication yield optimization for RL-driven process control. Built as Fab Yield Agent.</p>
+<span class="micro">Reinforcement Learning · Simulation · Python</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/ai-judge.html" target="_blank" rel="noopener noreferrer" aria-label="Open AI Judge in a new tab"><div class="project-display judge-display" aria-hidden="true">
 <b>Juwi<span>.</span></b><span>AI-assisted judging</span>
 </div>
 <div class="project-copy">
-<span class="micro">04 / Applied LLMs</span><h3>AI Judge <span aria-hidden="true">↗</span>
-</h3>
+<span class="micro">04 / Hackathon project</span><h3>AI Judge</h3>
 <p>AI-augmented hackathon judging platform designed to process thousands of submissions and support judges. Built for the IIT Roorkee National Hackathon.</p>
-<span class="micro">Generative AI · LLM · Hackathon Tool</span>
-</div></a>
-<article class="project reveal"><div class="project-display archive-display" aria-hidden="true">
-<b>ATS</b><span>Resume analysis</span>
+<span class="micro">Generative AI · LLM · Hackathon Tool</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/ats-checker.html" target="_blank" rel="noopener noreferrer" aria-label="Open AI-Based ATS Checker in a new tab"><div class="project-display archive-display" aria-hidden="true">
+<b>ATS</b><span>NLP</span>
 </div>
 <div class="project-copy">
-<span class="micro">05 / Resume analysis</span><h3>AI-Based ATS Checker</h3>
+<span class="micro">05 / Project</span><h3>AI-Based ATS Checker</h3>
 <p>Tool that scores resumes against ATS criteria with AI-driven keyword and structure analysis to help job seekers optimize their CVs.</p>
-<span class="micro">NLP · Resume Parsing · LLM Integration</span>
-</div></article><article class="project reveal"><div class="project-display archive-display" aria-hidden="true">
-<b>Aa</b><span>Text classification</span>
+<span class="micro">NLP · Resume Parsing · LLM Integration</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/ai-content-detector.html" target="_blank" rel="noopener noreferrer" aria-label="Open AI Content Detector in a new tab"><div class="project-display archive-display" aria-hidden="true">
+<b>Aa</b><span>Machine learning</span>
 </div>
 <div class="project-copy">
-<span class="micro">06 / Text classification</span><h3>AI Content Detector</h3>
+<span class="micro">06 / Project</span><h3>AI Content Detector</h3>
 <p>Classifier that distinguishes AI-generated text from human-written content using statistical and neural approaches.</p>
-<span class="micro">Text Classification · ML · NLP</span>
-</div></article><article class="project reveal"><div class="project-display archive-display" aria-hidden="true">
+<span class="micro">Text Classification · ML · NLP</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/e-commerce.html" target="_blank" rel="noopener noreferrer" aria-label="Open E-Commerce Website in a new tab"><div class="project-display archive-display" aria-hidden="true">
 <b>Shop.</b><span>Full-stack web</span>
 </div>
 <div class="project-copy">
-<span class="micro">07 / Full-stack web</span><h3>E-Commerce Website</h3>
-<p>An e-commerce platform with product listings, cart functionality, and checkout flow built from scratch.</p>
-<span class="micro">Web Apps · React · Node.js</span>
-</div></article>
+<span class="micro">07 / Built</span><h3>E-Commerce Website</h3>
+<p>An e-commerce platform with product listings, cart functionality, and a checkout flow built from scratch.</p>
+<span class="micro">Web Apps · React · Node.js</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/hackrelay.html" target="_blank" rel="noopener noreferrer" aria-label="Open HackRelay in a new tab"><div class="project-display archive-display" aria-hidden="true">
+<b>HR</b><span>Python · Event discovery</span>
+</div>
+<div class="project-copy">
+<span class="micro">08 / Built locally</span><h3>HackRelay</h3>
+<p>A local hackathon discovery and matching system with a Python backend and personal WhatsApp notifications. Combines external event listings with locally registered hackathons.</p>
+<span class="micro">Python · Event aggregation · WhatsApp · Local system</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/saar-phone-grading.html" target="_blank" rel="noopener noreferrer" aria-label="Open SAAR in a new tab"><div class="project-display archive-display" aria-hidden="true">
+<b>SAAR</b><span>Hardware · Computer vision</span>
+</div>
+<div class="project-copy">
+<span class="micro">09 / In development</span><h3>SAAR</h3>
+<p>A hardware and computer vision system for grading phones inside a four-camera inspection box. Designed around local inference and evidence a quality-control reviewer can inspect.</p>
+<span class="micro">Four-camera capture · Local inference · Computer vision · QC</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/refineops.html" target="_blank" rel="noopener noreferrer" aria-label="Open RefineOps in a new tab"><div class="project-display archive-display" aria-hidden="true">
+<b>RO</b><span>Industrial AI</span>
+</div>
+<div class="project-copy">
+<span class="micro">10 / Architecture designed</span><h3>RefineOps</h3>
+<p>A domain-specific IT harness for oil-refinery operations, with custom inference and an architecture designed around refinery workflows.</p>
+<span class="micro">Custom inference · IT architecture · Refinery workflows</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a><a class="project reveal" href="projects/steadystep.html" target="_blank" rel="noopener noreferrer" aria-label="Open Steadystep in a new tab"><div class="project-display archive-display" aria-hidden="true">
+<b>DSA</b><span>Adaptive learning</span>
+</div>
+<div class="project-copy">
+<span class="micro">11 / Built · Continuing development</span><h3>Steadystep</h3>
+<p>An adaptive DSA workspace that turns study sheets, personal goals, and practice history into a customized plan. Combines detailed solve-time analytics, notes, and structured focus sessions.</p>
+<span class="micro">Personalized planning · Study analytics · DSA · Local storage</span><span class="project-open">Open in a new tab <span aria-hidden="true">↗</span></span>
+</div></a>
 </div>
 </section>
 <section id="skills"><div class="section-heading">
@@ -261,7 +283,7 @@
 <h3>Binary Hack winner</h3>
 <p>RKGIT</p>
 </div>
-<span aria-hidden="true">↗</span></a><a class="cert" href="pi5.jpg" target="_blank" rel="noopener noreferrer"><span class="cert-icon">IITR</span><div>
+<span aria-hidden="true">↗</span></a><a class="cert" href="iit-roorkee.html" target="_blank" rel="noopener noreferrer"><span class="cert-icon">IITR</span><div>
 <h3>National Hackathon winner</h3>
 <p>IIT Roorkee</p>
 </div>
@@ -269,14 +291,15 @@
 <h3>Open Env Hackathon finalist</h3>
 <p>Meta</p>
 </div>
-<span aria-hidden="true">↗</span></a><a class="cert" href="https://landing-page3-liard.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="cert-icon">AWS</span><div>
+<span aria-hidden="true">↗</span></a><a class="cert" href="aws-hackathon.html" target="_blank" rel="noopener noreferrer"><span class="cert-icon">AWS</span><div>
 <h3>AWS Hackathon finalist</h3>
 <p>IIT Kanpur × Amazon Web Services</p>
 </div>
-<span aria-hidden="true">↗</span></a><article class="cert"><span class="cert-icon">8F</span><div>
+<span aria-hidden="true">↗</span></a><a class="cert" href="eightfold-hackathon.html" target="_blank" rel="noopener noreferrer"><span class="cert-icon">8F</span><div>
 <h3>Eightfold AI Hackathon finalist</h3>
 <p>IIT Kanpur × Eightfold.ai</p>
-</div></article><article class="cert"><span class="cert-icon">IBM</span><div>
+</div>
+<span aria-hidden="true">↗</span></a><article class="cert"><span class="cert-icon">IBM</span><div>
 <h3>AI Engineering Professional</h3>
 <p>IBM</p>
 </div></article><article class="cert"><span class="cert-icon">GCP</span><div>

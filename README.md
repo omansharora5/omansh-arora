@@ -10,17 +10,19 @@ python -m http.server 4173 --bind 127.0.0.1
 
 Open `http://127.0.0.1:4173`. Production is https://pp-website-seven.vercel.app and deploys the repository root from `main`. The repository is https://github.com/omansharora5/omansh-arora.
 
-Run the portable resource and fragment-link checks with `node --test tests/site.test.cjs`. Browser verification also covered all nine pages at 375, 768, 1024, and 1440 pixels, event links from both sections, dial navigation, motion preferences, keyboard process selection, the Meta image dialog, and existing video metadata. External services and the pending VDMA images are outside those checks. The public production deployment was verified on 1 November 2026 using the browser checks described above. The manual motion button is absent, old saved pause settings are ignored, and the site title is Omansh Arora. Preview deployments may require the owner's Vercel sign-in.
+Run the portable resource and fragment-link checks with `node --test tests/site.test.cjs`. Browser verification also covered all 23 pages at 375, 768, 1024, and 1440 pixels, event links from both sections, dial navigation, motion preferences, keyboard process selection, the Meta image dialog, and existing video metadata. External services and the pending VDMA images are outside those checks. The public production deployment was verified on 1 November 2026 using the browser checks described above. The manual motion button is absent, old saved pause settings are ignored, and the site title is Omansh Arora. Preview deployments may require the owner's Vercel sign-in.
 
 ## Pages
 
-- `index.html`: experience summary, seven visible projects, research index, hackathons, full skills, certificates, and education. Projects without public repository links remain visible as standalone cards. The original ATS checker, AI content detector, and e-commerce project are included.
+- `index.html`: experience summary, eleven visible projects, research index, hackathons, full skills, certificates, and education. Each project opens its own notes in a new tab, including projects without public repository links. The original ATS checker, AI content detector, and e-commerce project are included.
 - `grandhack.html`: GrandHack at IPEC, VDMA project overview and gallery.
 - `binary-hack.html`: Binary Hack at RKGIT, VDMA project overview and gallery.
 - `meta-open-env.html`: existing Fab Yield Agent story, local demo video, and four event photographs.
 - `research/`: five white research notes with selectable process steps.
+- `projects/`: eleven project pages, including HackRelay, SAAR, RefineOps, Steadystep, and the existing e-commerce project.
+- `iit-roorkee.html`, `aws-hackathon.html`, and `eightfold-hackathon.html`: additional hackathon stories. All six event cards share the same appearance and open a story in a new tab.
 
-The interface adapts the user's Blockit reference: grey surfaces, white displays, rounded control groups, orange indicators, and a section dial. The dial follows the active section. Its arrow buttons provide the same navigation without a mouse wheel. Motion follows the operating system's reduced-motion setting. There is no manual motion button.
+The interface adapts the user's Blockit reference: grey surfaces, white displays, rounded control groups, orange indicators, and a section dial. The dial rotates continuously with page scrolling in both directions and stops under reduced-motion preferences. Its arrow buttons provide the same navigation without a mouse wheel. Motion follows the operating system's reduced-motion setting. There is no manual motion button.
 
 ## Add the VDMA event photos
 

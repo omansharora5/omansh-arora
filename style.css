@@ -221,7 +221,7 @@ nav a:hover{
   top:4px;
   width:242px;
   height:242px;
-  transition:transform .65s var(--ease)
+  transform-origin:center
 }
 .dial-ticks{
   position:absolute;
@@ -242,6 +242,15 @@ nav a:hover{
   inset:65px;
   border-radius:50%;
   background:var(--panel)
+}
+.dial-reference{
+  position:absolute;
+  right:8px;
+  top:calc(50% - 2px);
+  width:23px;
+  height:4px;
+  background:var(--orange);
+  border-radius:2px
 }
 .dial-marker{
   position:absolute;
@@ -482,13 +491,10 @@ nav a:hover{
   align-items:center;
   gap:20px;
   padding:23px 26px;
-  border:1px solid #c7c4c1;
+  background:var(--white);
+  border:1px solid transparent;
   border-radius:20px;
   transition:background .18s,transform .18s
-}
-.achievement:nth-child(-n+2){
-  background:var(--white);
-  border-color:transparent
 }
 .win-number{
   font-family:var(--mono);
@@ -522,6 +528,10 @@ nav a:hover{
   background:#c9c6c4;
   color:#423e3c
 }
+.achievement .badge{
+  background:#e2ded9;
+  color:var(--secondary)
+}
 a.achievement:hover{
   background:#efeeed;
   transform:translateX(3px)
@@ -535,12 +545,15 @@ a.achievement:hover{
   background:var(--white);
   border-radius:24px;
   overflow:hidden;
+  display:flex;
+  flex-direction:column;
   transition:transform .2s
 }
 .project[href]:hover{
   transform:translateY(-4px)
 }
 .project-display{
+  flex-shrink:0;
   height:205px;
   background:#d3d0cd;
   margin:10px 10px 0;
@@ -561,7 +574,10 @@ a.achievement:hover{
   color:var(--secondary)
 }
 .project-copy{
-  padding:24px
+  padding:24px;
+  flex:1;
+  display:flex;
+  flex-direction:column
 }
 .project-copy>.micro{
   font-size:8px;
@@ -581,6 +597,30 @@ a.achievement:hover{
   line-height:1.7;
   color:var(--secondary);
   margin-bottom:18px
+}
+.project-copy>.micro:nth-last-child(2){
+  margin-top:auto
+}
+.project-open{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  min-height:44px;
+  padding:10px 13px;
+  margin-top:22px;
+  background:#eceae7;
+  border-radius:9px;
+  font-size:12px
+}
+.project-open>span{
+  font-size:17px
+}
+.project:hover .project-open{
+  background:#dedad5
+}
+.story-certificate{
+  margin-top:35px
 }
 .vision-display{
   background:#252323

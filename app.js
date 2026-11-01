@@ -20,7 +20,6 @@
       if (i === index) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
-    if (wheel) wheel.style.transform = `rotate(${index * -24}deg)`;
     if (counter) counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(sections.length).padStart(2, '0')}`;
     if (previous) previous.disabled = index === 0;
     if (next) next.disabled = index === sections.length - 1;
@@ -34,6 +33,7 @@
     let scheduled = false;
     function syncScroll() {
       scheduled = false;
+      if (wheel) wheel.style.transform = `rotate(${motionPreference.matches ? 0 : -scrollY * .12}deg)`;
       const reference = Math.min(innerHeight * .28, 230);
       let index = 0;
       sections.forEach((section, i) => { if (section.getBoundingClientRect().top <= reference) index = i; });
@@ -44,6 +44,7 @@
       if (!scheduled) { scheduled = true; requestAnimationFrame(syncScroll); }
     }, { passive: true });
     addEventListener('resize', syncScroll);
+    motionPreference.addEventListener('change', syncScroll);
     syncScroll();
     previous?.addEventListener('click', () => moveSection(-1));
     next?.addEventListener('click', () => moveSection(1));
